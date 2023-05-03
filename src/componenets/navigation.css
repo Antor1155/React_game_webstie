@@ -1,0 +1,35 @@
+nav{
+    border:2px solid yellow;
+    background-color: antiquewhite;
+
+    /* width: 20vw; */
+
+    padding:0 5vw;
+}
+nav ul{
+    /* background-color: antiquewhite; */
+    margin: 0;
+    padding: 0;
+    height: 80vh;
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+nav ul li{
+    list-style: none inside;
+    padding: 0;
+    margin-bottom: 2vh;
+}
+nav ul li a:focus{
+    color: rgb(22, 222, 28);
+}
+nav ul li:hover{
+   text-decoration: underline;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: rgb(2, 12, 28);
+}

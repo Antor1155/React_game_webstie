@@ -1,0 +1,12 @@
+.head-section{
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* align-content: center; */
+    padding: 0 5vw;
+}
+
+.head-section aside img{
+    height: 15vh;
+}
