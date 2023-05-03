@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import Head from './componenets/Head';
 import Navigation from './componenets/Navigation';
 import NewsSection from './componenets/NewsSection';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Outlet } from 'react-router-dom';
 
 function App() {
   return (
@@ -11,8 +11,9 @@ function App() {
       <Head></Head>
       <Navigation></Navigation>
       <Routes>
-        <Route path="/:id" element={NewsSection}></Route>
+        <Route path="" element={NewsSection}></Route>
       </Routes>
+      <Outlet></Outlet>
     </div>
   );
 }
