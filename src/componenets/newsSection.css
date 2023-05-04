@@ -5,6 +5,7 @@ main{
     overflow: scroll;
     height: 85vh;
     overflow-x: hidden;
+    position:relative;
 }
 
 main h2{
@@ -14,8 +15,20 @@ main h2{
     background-color: rgba(227, 203, 172, 0.437);
 }
 
+main .resultCounter{
+    font-size: small;
+    position: absolute;
+    top: 0;
+    left:0;
+    margin: 1vw;
+}
+
 .cardsSection{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+}
+
+.loading{
+    width: 100%;
 }

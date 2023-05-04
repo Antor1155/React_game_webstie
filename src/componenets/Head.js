@@ -7,7 +7,7 @@ class Head extends Component {
         return (
             <header className='headSection'>
                 <div className='search'>
-                    <input type='text'  maxLength={10} placeholder='topic'></input>
+                    <input type='text'  maxLength={50} placeholder='topic'></input>
                     <button> Search</button>
                 </div>
                 <h1>Heading</h1>
