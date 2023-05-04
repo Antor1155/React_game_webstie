@@ -6,24 +6,32 @@ import Cards from './Cards';
 
 function NewsSection() {
     let [news, setNews] = useState(null)
+    let [serverError, setServerError] = useState(false)
     let { id } = useParams()
-    console.log(id)
+
 
     
     function newsCollector (searchid){
         let url = ""
         if (searchid === "top-headlines"){
-            url = "https://newsapi.org/v2/top-headlines?country=us&apiKey=6ecfe613f5e94a768cef67f7eecf"
+            url = "https://newsapi.org/v2/top-headlines?country=us&apiKey=6ecfe613f5e94a768cef67f7eecfd949"
         }else{
-            url = `https://newsapi.org/v2/everything?q=${searchid}&apiKey=6ecfe613f5e94a768cef67f7eecf`
+            url = `https://newsapi.org/v2/everything?q=${searchid}&apiKey=6ecfe613f5e94a768cef67f7eecfd949`
         }
         fetch(url)
             .then(response => response.json())
             .then(data =>{
-                setNews(data.articles)
-                console.log(data)
+                if (data.status ==="error"){
+                    setServerError(true)
+                }
+                else{
+                    setNews(data.articles)
+                    console.log(data)
+                    setServerError(false)
+                }
             })
             .catch(error =>{
+                setServerError(true)
                 console.log("error" + error)
             })
     }
@@ -43,7 +51,11 @@ function NewsSection() {
             <h2>{id}</h2>
             <p className='resultCounter'>results: {news ? news.length : 0}</p>
             <section className='cardsSection'>
-                {news ? news.map((data, i) => <Cards key={i} data={data}></Cards>) : <img className='loading' src={require("../asset/loading.gif")} alt="loading gif"></img>}
+                {news && ! serverError  && news.length > 0 && news.map((data, i) => <Cards key={i} data={data}></Cards>)}
+                {serverError && <img className='loading' src={require("../asset/error.gif")} />}
+                {!serverError && !news && <img className='loading' src={require("../asset/loading.gif")} alt="loading gif"></img>}
+
+                {news && news.length == 0 && <img className='loading' src={require("../asset/noResFound.png")} />}
             </section>
         </main>
     );

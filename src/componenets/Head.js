@@ -1,14 +1,27 @@
-import React, { Component } from 'react';
+import React, { Component, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import "./head.css"
+import "./head.css";
+import { useNavigate } from 'react-router-dom';
 
-class Head extends Component {
-    render() {
+function Head(){
+
+        let [topic, setTopic] = useState("")
+        let navigate = useNavigate()
+
+        function handleChange(e){
+            setTopic(e.target.value)
+        }
+        function handleSearch(){
+            if (topic){
+                navigate(`/${topic}`)
+                setTopic("")
+            }
+        }
         return (
             <header className='headSection'>
                 <div className='search'>
-                    <input type='text'  maxLength={50} placeholder='topic'></input>
-                    <button> Search</button>
+                    <input type='text' onChange={handleChange} value={topic} maxLength={50} placeholder='topic'></input>
+                    <button onClick={handleSearch}> Search</button>
                 </div>
                 <h1>Heading</h1>
                 <aside>
@@ -19,6 +32,5 @@ class Head extends Component {
             </header>
         );
     }
-}
 
 export default Head;

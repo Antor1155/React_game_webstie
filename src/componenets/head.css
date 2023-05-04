@@ -9,6 +9,17 @@
     grid-column-end: 6;
 }
 
+.search input, button{
+    border: 1px solid blueviolet;
+    border-radius: 3px;
+    padding:3px;
+    margin: 2px;
+}
+
+.search button:hover{
+    box-shadow:2px 2px rebeccapurple;
+}
+
 .headSection aside img{
     height: 10vh;
 }
