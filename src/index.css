@@ -16,6 +16,9 @@ html {
   scrollbar-width: none;  /* Firefox */
 }
 
+main ::-webkit-scrollbar{
+  display: ruby;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

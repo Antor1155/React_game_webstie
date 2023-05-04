@@ -2,4 +2,5 @@
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   font-family: 'Times New Roman', serif;
+  background-color: rgb(245, 241, 241);
 }
