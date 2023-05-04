@@ -1,5 +1,22 @@
 footer{
     text-align: center;
-    background-color: pink;
+    background-color: rgb(240, 232, 232);
     grid-column: 1 / span 5;
+}
+
+footer h4{
+    font-family: 'Playfair Display', serif;
+}
+
+footer .links img{
+    width: 35px;
+    background-color: rgb(240, 232, 232);
+    border-radius: 50%;
+    margin:0px 5px;
+}
+
+footer .links img:hover{
+    
+    background-color: rgb(53, 181, 203);
+
 }
