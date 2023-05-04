@@ -10,12 +10,13 @@ import FourZero from './componenets/fourzero';
 function App() {
   return (
     <div className="App">
-        <Head></Head>
+      <Head></Head>
       <Navigation></Navigation>
-        <Routes>
-          <Route path="/:id" element={<NewsSection></NewsSection>}></Route>
-          <Route path="*" element={<FourZero></FourZero>} />
-        </Routes>
+      <Routes>
+        <Route path="/" element={<NewsSection></NewsSection>}></Route>
+        <Route path="/:id" element={<NewsSection></NewsSection>}></Route>
+        <Route path="*" element={<FourZero></FourZero>} />
+      </Routes>
       <Footer></Footer>
     </div>
   );
