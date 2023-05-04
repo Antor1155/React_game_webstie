@@ -19,12 +19,12 @@ const Cards = ({data}) => {
         <div className={`cards ${expand ? "fullHeight" : ""}`}>
             <img src={urlToImage? urlToImage : notFound} alt="Img of the rews"></img>
             <ul>
-                <li><b>Author: </b>{author ? author: "N/A"}</li>
-                <li><b>Source: </b>{source.name ? source.name : "N/A"}</li>
-                <li><b>Date: </b>{publishedAt? publishedAt : "N/A"}</li>
+                <li><b>Author: </b>{author ? author.slice(0, 20): "N/A"}</li>
+                <li><b>Source: </b>{source.name ? source.name.slice(0, 20) : "N/A"}</li>
+                <li><b>Date: </b>{publishedAt? publishedAt.slice(0, 10) : "N/A"}</li>
             </ul>
 
-            <p><b>Title: </b> {title ? title : "N/A"}</p>
+            <p><b>Title: </b> {title ? title.slice(0, 150) : "N/A"}</p>
             <Link className='readMore' to={url} target='_blank'>{url ? "Read full article": "N/A"}</Link>
 
             <button className='expandBtn' onClick={handleClick}>{expand ? "Collapse": "Expand" }  </button>
