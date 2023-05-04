@@ -1,8 +1,12 @@
 main{
     grid-column: 2/ span 5;
-    border:2px solid antiquewhite;
+    border:2px solid rgb(143, 0, 0);
     border-radius: 5px;
+    overflow: scroll;
+    height: 85vh;
+    overflow-x: hidden;
 }
-.newsSection{
-    /* background-color: yellow; */
+
+main h2{
+    text-align: center;
 }
