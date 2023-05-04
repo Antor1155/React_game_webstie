@@ -1339,8 +1339,7 @@ function NewsSection() {
     return (
         <main>
             <h2>{id}</h2>
-            <section className='cardSection'>
-
+            <section className='cardsSection'>
                 {news ? news.map((data, i) => <Cards key={i} data={data}></Cards>) : "nothing found yet"}
             </section>
         </main>

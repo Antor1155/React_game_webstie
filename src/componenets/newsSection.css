@@ -9,4 +9,13 @@ main{
 
 main h2{
     text-align: center;
+    text-transform: capitalize;
+    top:0;
+    background-color: rgba(227, 203, 172, 0.437);
+}
+
+.cardsSection{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
