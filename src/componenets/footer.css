@@ -1,0 +1,5 @@
+footer{
+    text-align: center;
+    background-color: pink;
+    grid-column: 1 / span 5;
+}

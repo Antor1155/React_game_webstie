@@ -6,7 +6,7 @@ class Navigation extends Component {
     render() {
         return (
             <nav>
-                <ul className>
+                <ul>
                     <li><Link to="/general">General</Link></li>
                     <li><Link to="/business">Business</Link></li>
                     <li><Link to="/education">Education</Link></li>

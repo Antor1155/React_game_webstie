@@ -1,0 +1,8 @@
+main{
+    grid-column: 2/ span 5;
+    border:2px solid antiquewhite;
+    border-radius: 5px;
+}
+.newsSection{
+    /* background-color: yellow; */
+}

@@ -5,7 +5,7 @@ import "./head.css"
 class Head extends Component {
     render() {
         return (
-            <section className='head-section'>
+            <header className='headSection'>
                 <div className='search'>
                     <input type='text' value="" placeholder='topic'></input>
                     <button> New</button>
@@ -16,7 +16,7 @@ class Head extends Component {
                         <img src={require("../asset/giphy.gif")} alt="add" />
                     </Link>
                 </aside>
-            </section>
+            </header>
         );
     }
 }

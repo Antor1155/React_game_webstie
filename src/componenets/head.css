@@ -1,11 +1,14 @@
-.head-section{
+.headSection{
     background-color: antiquewhite;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 5vw;
+
+    grid-column-start: 1;
+    grid-column-end: 6;
 }
 
-.head-section aside img{
-    height: 15vh;
+.headSection aside img{
+    height: 10vh;
 }
