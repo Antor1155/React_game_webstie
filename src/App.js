@@ -6,11 +6,14 @@ import Footer from './componenets/Foot';
 import { Routes, Route} from 'react-router-dom';
 import FourZero from './componenets/fourzero';
 import {ThemeContext} from './componenets/ThemeProvider';
+import { useState } from 'react';
 
 function App() {
 
+  let [LightTheme, setLightTheme] = useState(true)
+
   return (
-    <ThemeContext.Provider value={"hello2"}>
+    <ThemeContext.Provider value={{LightTheme, setLightTheme}}>
       <div className="App">
         <Head></Head>
         <Navigation></Navigation>

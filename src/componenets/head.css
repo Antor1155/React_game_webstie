@@ -26,3 +26,11 @@
 .headSection aside img{
     height: 10vh;
 }
+
+.themeChanger{
+    margin: 5px;
+}
+
+.themeChanger img{
+    width: 20px;
+}
