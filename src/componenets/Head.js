@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import "./head.css";
 import { useNavigate } from 'react-router-dom';
 
+
+
 function Head(){
 
         let [topic, setTopic] = useState("")
@@ -23,7 +25,7 @@ function Head(){
                     <input type='text' onChange={handleChange} value={topic} maxLength={50} placeholder='topic'></input>
                     <button onClick={handleSearch}> Search</button>
                 </div>
-                <h1>Heading</h1>
+                <h1>News Feed</h1>
                 <aside>
                     <Link to="https://www.linkedin.com/in/md-antor/" target='_blank'>
                         <img src={require("../asset/giphy.gif")} alt="add" />

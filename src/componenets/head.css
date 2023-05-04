@@ -8,6 +8,9 @@
     grid-column-start: 1;
     grid-column-end: 6;
 }
+.headSection h1{
+    font-family: 'Playfair Display', serif;
+}
 
 .search input, button{
     border: 1px solid blueviolet;
