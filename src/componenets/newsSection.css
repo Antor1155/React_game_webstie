@@ -17,10 +17,12 @@ main h2{
 
 main .resultCounter{
     font-size: small;
-    position: absolute;
+    position: sticky;
+    z-index: 2;
     top: 0;
     left:0;
     margin: 1vw;
+
 }
 
 .cardsSection{
