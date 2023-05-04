@@ -1331,7 +1331,7 @@ function NewsSection() {
 
         setNews(obj.articles)
         console.log(news && news)
-    }, [])
+    })
 
 
 
