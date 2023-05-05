@@ -9,7 +9,6 @@ import {ThemeContext} from './componenets/ThemeProvider';
 import { useState } from 'react';
 
 function App() {
-
   let [lightTheme, setLightTheme] = useState(true)
 
   return (

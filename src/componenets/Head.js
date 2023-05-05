@@ -25,7 +25,7 @@ function Head() {
         setLightTheme(!lightTheme)
     }
     function handleKeyPress(e){
-        if(e.key == "Enter"){
+        if(e.key === "Enter"){
             handleSearch()
         }
     }

@@ -18,9 +18,9 @@ function NewsSection() {
     function newsCollector(searchid) {
         let url = ""
         if (searchid === "top-headlines") {
-            url = "https://newsapi.org/v2/top-headlines?country=us&apiKey=6ecfe613f5e94a768cef67f7eecfd949"
+            url = `https://newsapi.org/v2/top-headlines?country=us&apiKey=${process.env.REACT_APP_KEY}`
         } else {
-            url = `https://newsapi.org/v2/everything?q=${searchid}&apiKey=6ecfe613f5e94a768cef67f7eecfd949`
+            url = `https://newsapi.org/v2/everything?q=${searchid}&apiKey=${process.env.REACT_APP_KEY}`
         }
         fetch(url)
             .then(response => response.json())
