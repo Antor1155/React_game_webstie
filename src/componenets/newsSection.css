@@ -59,23 +59,10 @@ main.darkTheme .resultCounter{
 }
 
 
-/* dark theme for cards  */
-main.darkTheme .cards{
-    background-color: #533d3d;
-    border-color: #533d3d;
-}
+/* media query for news section  */
 
-.darkTheme .cards b{
-    color: rgb(0, 0, 0);
-}
-
-.darkTheme .cards :is( .expandBtn, .readMore){
-    color: #d4d4d4;
-    background-color: transparent;
-    border: 2px solid rgb(88, 88, 168);
-    box-shadow: 2px 2px rgb(88, 88, 168);
-}
-.darkTheme .cards .expandBtn:hover{
-    background-color: rgb(88, 88, 168);
-    color: black
+@media only screen and (max-width: 700px) {
+    main{
+        grid-column: 1/ span 5;
+    }
 }
