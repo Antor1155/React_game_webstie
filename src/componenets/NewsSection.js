@@ -14,13 +14,13 @@ function NewsSection() {
     let { lightTheme } = useContext(ThemeContext)
 
     let mainRef = createRef()
-
+    
     function newsCollector(searchid) {
         let url = ""
         if (searchid === "top-headlines") {
-            url = `https://newsapi.org/v2/top-headlines?country=us&apiKey=${process.env.REACT_APP_KEY}`
+            url = `https://newsapi.org/v2/top-headlines?country=us&apiKey=${process.env.REACT_APP_A_KEY}`
         } else {
-            url = `https://newsapi.org/v2/everything?q=${searchid}&apiKey=${process.env.REACT_APP_KEY}`
+            url = `https://newsapi.org/v2/everything?q=${searchid}&apiKey=${process.env.REACT_APP_A_KEY}`
         }
         fetch(url)
             .then(response => response.json())
