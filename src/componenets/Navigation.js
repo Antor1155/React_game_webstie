@@ -6,8 +6,6 @@ import { ThemeContext } from './ThemeProvider';
 
 function Navigation() {
     let {lightTheme} = useContext(ThemeContext)
-    console.log(lightTheme)
-
         return (
             <nav className={!lightTheme ? "darkTheme" : ""}>
                 <ul>

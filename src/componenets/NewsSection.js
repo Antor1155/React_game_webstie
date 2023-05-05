@@ -29,7 +29,6 @@ function NewsSection() {
                 }
                 else{
                     setNews(data.articles)
-                    console.log(data)
                     setServerError(false)
                 }
             })
@@ -39,15 +38,13 @@ function NewsSection() {
             })
     }
 
-
+    
+    // useeffect to search news 
     useEffect(() => {
         setNews(null)
         newsCollector(id)
-        console.log("news: " + news)
     }, [id])
-
-
-
+    
 
     return (
         <main ref={mainRef} className={!lightTheme ? "darkTheme" : ""}>
