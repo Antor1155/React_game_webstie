@@ -48,3 +48,23 @@
     color: #e2e2e2;
 }
 
+
+/* media query for head section  */
+
+@media only screen and (max-width: 700px) {
+    aside{
+        display: none;
+    }
+    
+    .headSection{
+      /* background-color: red; */
+
+      flex-direction: row-reverse;
+    }
+
+    .search{
+        display: flex;
+        flex-wrap: wrap-reverse;
+        justify-content: end;
+    }
+  }

@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { createRef, useContext, useEffect, useRef, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import "./newsSection.css"
 import Cards from './Cards';
@@ -11,6 +11,8 @@ function NewsSection() {
     let { id } = useParams()
 
     let {lightTheme} = useContext(ThemeContext)
+
+    let mainRef = createRef()
 
     function newsCollector (searchid){
         let url = ""
@@ -48,7 +50,7 @@ function NewsSection() {
 
 
     return (
-        <main  className={!lightTheme ? "darkTheme" : ""}>
+        <main ref={mainRef} className={!lightTheme ? "darkTheme" : ""}>
             <h2>{id}</h2>
             <p className='resultCounter'>results: {news ? news.length : 0}</p>
             <section className='cardsSection'>
