@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import "./newsSection.css"
 import Cards from './Cards';
+import { ThemeContext } from './ThemeProvider';
 
 
 function NewsSection() {
@@ -9,8 +10,8 @@ function NewsSection() {
     let [serverError, setServerError] = useState(false)
     let { id } = useParams()
 
+    let {lightTheme} = useContext(ThemeContext)
 
-    
     function newsCollector (searchid){
         let url = ""
         if (searchid === "top-headlines"){
@@ -47,7 +48,7 @@ function NewsSection() {
 
 
     return (
-        <main>
+        <main  className={!lightTheme ? "darkTheme" : ""}>
             <h2>{id}</h2>
             <p className='resultCounter'>results: {news ? news.length : 0}</p>
             <section className='cardsSection'>

@@ -21,7 +21,7 @@ main .resultCounter{
     z-index: 2;
     top: 0;
     left:0;
-    margin: 1vw;
+    padding:.5vw 1vw;
 
 }
 
@@ -34,4 +34,43 @@ main .resultCounter{
 .loading{
     width: 70vw;
     height: 70vh;
+}
+
+
+/* dark theme implemented form here: .cards and newsSection */
+
+main.darkTheme{
+    background-color: rgb(51, 47, 47);
+
+    border-color: rgb(124, 106, 83);
+    border:none;
+
+    color: #d4d4d4;
+}
+
+main.darkTheme h2{
+    background-color: rgb(28, 24, 24);
+}
+
+main.darkTheme .resultCounter{
+    background-color: rgb(28, 24, 24);
+    display: inline;
+    border-radius: 0 10px 10px 0;
+}
+
+
+/* dark theme for cards  */
+main.darkTheme .cards{
+    background-color: #533d3d;
+    border-color: #533d3d;
+}
+
+.darkTheme .cards b{
+    color: rgb(0, 0, 0);
+}
+
+.darkTheme .cards :is( .expandBtn, .readMore){
+    color: #d4d4d4;
+    background-color: transparent;
+    border: 2px solid rgb(88, 88, 168);
 }

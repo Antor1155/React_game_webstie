@@ -34,3 +34,17 @@
 .themeChanger img{
     width: 20px;
 }
+
+
+/* Dark theme implemented form here  */
+.headSection.darkTheme{
+    background-color: rgb(28, 24, 24);
+    color: rgb(161, 120, 120);
+}
+
+.headSection.darkTheme :is(input, button){
+    background-color: rgb(28, 24, 24);
+    border-color: rgb(129, 123, 116);
+    color: #e2e2e2;
+}
+

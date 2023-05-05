@@ -34,3 +34,19 @@ nav ul li a{
     text-decoration: none;
     color: rgb(2, 12, 28);
 }
+
+
+/* dark theme implemeted form here  */
+
+nav.darkTheme{
+    background-color:rgb(28, 24, 24);
+    color: white;
+}
+
+nav.darkTheme ul li a{
+    text-decoration: none;
+    color:#e2e2e2;
+}
+nav.darkTheme ul li a:focus{
+    color: rgb(22, 222, 28);
+}

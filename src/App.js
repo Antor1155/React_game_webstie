@@ -10,10 +10,10 @@ import { useState } from 'react';
 
 function App() {
 
-  let [LightTheme, setLightTheme] = useState(true)
+  let [lightTheme, setLightTheme] = useState(true)
 
   return (
-    <ThemeContext.Provider value={{LightTheme, setLightTheme}}>
+    <ThemeContext.Provider value={{lightTheme, setLightTheme}}>
       <div className="App">
         <Head></Head>
         <Navigation></Navigation>

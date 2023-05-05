@@ -7,7 +7,7 @@ import { useContext } from 'react';
 import { ThemeContext } from "./ThemeProvider";
 
 function Head() {
-    let { LightTheme, setLightTheme } = useContext(ThemeContext);
+    let { lightTheme, setLightTheme } = useContext(ThemeContext);
 
     let [topic, setTopic] = useState("")
     let navigate = useNavigate()
@@ -22,17 +22,16 @@ function Head() {
         }
     }
     function handleTheme() {
-        setLightTheme(!LightTheme)
-        console.log("LightTheme is setted: ", LightTheme)
+        setLightTheme(!lightTheme)
     }
     return (
-        <header className='headSection'>
+        <header className={`headSection ${!lightTheme ? "darkTheme" : ""}` }>
             <div className='search'>
                 <input type='text' onChange={handleChange} value={topic} maxLength={50} placeholder='topic'></input>
                 <button onClick={handleSearch}> Search</button>
 
                 <button className='themeChanger' onClick={handleTheme}>
-                    {LightTheme ? <img src={require("../asset/icons/moon.png")} alt="moon icon"></img> :
+                    {lightTheme ? <img src={require("../asset/icons/moon.png")} alt="moon icon"></img> :
 
                         <img src={require("../asset/icons/sun.png")} alt="sun"></img>
                     }
