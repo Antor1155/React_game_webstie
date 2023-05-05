@@ -24,10 +24,15 @@ function Head() {
     function handleTheme() {
         setLightTheme(!lightTheme)
     }
+    function handleKeyPress(e){
+        if(e.key == "Enter"){
+            handleSearch()
+        }
+    }
     return (
         <header className={`headSection ${!lightTheme ? "darkTheme" : ""}` }>
             <div className='search'>
-                <input type='text' onChange={handleChange} value={topic} maxLength={50} placeholder='topic'></input>
+                <input type='text' onKeyDown={handleKeyPress} onChange={handleChange} value={topic} maxLength={50} placeholder='topic'></input>
                 <button onClick={handleSearch}> Search</button>
 
                 <button className='themeChanger' onClick={handleTheme}>
