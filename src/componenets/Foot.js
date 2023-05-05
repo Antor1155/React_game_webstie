@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import "./footer.css";
 import { Link } from 'react-router-dom';
+import { ThemeContext } from './ThemeProvider';
 
 const Footer = () => {
+    const {lightTheme} = useContext(ThemeContext)
     return (
-        <footer>
+        <footer className={!lightTheme ? "darkTheme" : ""}>
             <h4> News feed footer</h4>
             <p>This is an one day Project to remind the concepts of React, router, dom and hooks.</p>
 

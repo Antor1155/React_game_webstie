@@ -20,3 +20,10 @@ footer .links img:hover{
     background-color: rgb(53, 181, 203);
 
 }
+
+/* dark theme implemented form here  */
+
+footer.darkTheme{
+    background-color: rgb(28, 24, 24);
+    color: #e2e2e2;
+}

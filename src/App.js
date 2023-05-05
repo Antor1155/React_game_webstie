@@ -14,7 +14,7 @@ function App() {
 
   return (
     <ThemeContext.Provider value={{lightTheme, setLightTheme}}>
-      <div className="App">
+      <div className={`App ${!lightTheme ? "darkTheme" : ""}`}>
         <Head></Head>
         <Navigation></Navigation>
         <Routes>

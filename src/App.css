@@ -4,3 +4,7 @@
   font-family: 'Times New Roman', serif;
   background-color: rgb(240, 232, 232);
 }
+
+.App.darkTheme{
+  background-color: rgb(28, 24, 24);
+}
