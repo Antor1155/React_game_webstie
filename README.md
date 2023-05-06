@@ -1,4 +1,4 @@
-# [News feed form Antor](https://newsfeedfromantor.netlify.app/)
+# [News feed form Antor](https://newsfromantor.netlify.app/)
 
 ## WEBSITE contains news based on different catagory, search topics
 ## Also contains dark and light Theme.
