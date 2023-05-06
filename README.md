@@ -2,6 +2,7 @@
 
 ## WEBSITE contains news based on different catagory, search topics
 ## Also contains dark and light Theme.
+## Handle unwanted
 
 This project is an one day practice project with react which helped me to remember:
 * React hooks
