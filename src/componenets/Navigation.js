@@ -9,11 +9,11 @@ function Navigation() {
         return (
             <nav className={!lightTheme ? "darkTheme" : ""}>
                 <ul>
-                    <li><Link to="/top-headlines">Top headlines</Link></li>
-                    <li><Link to="/general">General</Link></li>
+                    <li><Link to="/world">World</Link></li>
                     <li><Link to="/business">Business</Link></li>
                     <li><Link to="/education">Education</Link></li>
                     <li><Link to="/technology">Technology</Link></li>
+                    <li><Link to="/science">Science</Link></li>
                     <li><Link to="/politics">Politics</Link></li>
                     <li><Link to="/entertainment">Entertainments</Link></li>
                 </ul>

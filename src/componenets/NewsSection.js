@@ -1,4 +1,4 @@
-import React, { createRef, useContext, useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import "./newsSection.css"
 import Cards from './Cards';
@@ -13,15 +13,10 @@ function NewsSection() {
 
     let { lightTheme } = useContext(ThemeContext)
 
-    let mainRef = createRef()
     
     function newsCollector(searchid) {
-        let url = ""
-        if (searchid === "top-headlines") {
-            url = `https://newsapi.org/v2/top-headlines?country=us&apiKey=${process.env.REACT_APP_A_KEY}`
-        } else {
-            url = `https://newsapi.org/v2/everything?q=${searchid}&apiKey=${process.env.REACT_APP_A_KEY}`
-        }
+        let url = `https://inshorts.deta.dev/news?category=${searchid ? searchid.toLowerCase() : "all" }`
+       
         fetch(url)
             .then(response => response.json())
             .then(data => {
@@ -29,7 +24,7 @@ function NewsSection() {
                     setServerError(true)
                 }
                 else {
-                    setInitialNews(data.articles)
+                    setInitialNews(data.data)
                     setServerError(false)
                 }
             })
@@ -66,11 +61,11 @@ function NewsSection() {
 
 
     return (
-        <main ref={mainRef} className={!lightTheme ? "darkTheme" : ""}>
+        <main className={!lightTheme ? "darkTheme" : ""}>
             <h2>{id}</h2>
             <p className='resultCounter'>results: {news ? news.length : 0}</p>
             <section className='cardsSection'>
-                {news && !serverError && news.length > 0 && news.map((data, i) => <Cards key={i} data={data}></Cards>)}
+                {news && !serverError && news.length > 0 && news.map((singleNews, i) => <Cards key={i} data={singleNews}></Cards>)}
                 {serverError && <img className='loading' src={require("../asset/serverError.gif")}  alt='img of error'/>}
                 {!serverError && !news && <img className='loading' src={require("../asset/loading.gif")} alt="loading gif"></img>}
 

@@ -32,7 +32,7 @@ function Head() {
     return (
         <header className={`headSection ${!lightTheme ? "darkTheme" : ""}` }>
             <div className='search'>
-                <input type='text' onKeyDown={handleKeyPress} onChange={handleChange} value={topic} maxLength={50} placeholder='topic'></input>
+                <input type='text' onKeyDown={handleKeyPress} onChange={handleChange} value={topic} maxLength={50} placeholder='ex: Football, startup, love'></input>
                 <button onClick={handleSearch}> Search</button>
 
                 <button className='themeChanger' onClick={handleTheme}>

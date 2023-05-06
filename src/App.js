@@ -6,9 +6,14 @@ import Footer from './componenets/Foot';
 import { Routes, Route} from 'react-router-dom';
 import FourZero from './componenets/fourzero';
 import {ThemeContext} from './componenets/ThemeProvider';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 function App() {
+
+  useEffect(()=>{
+    console.log("I appreciate your effort, Thank you..")
+  },[])
+
   let [lightTheme, setLightTheme] = useState(true)
 
   return (
