@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState, useRef } from 'react';
 import { useParams } from 'react-router-dom';
 import "./newsSection.css"
 import Cards from './Cards';
@@ -48,9 +48,18 @@ function NewsSection() {
 
     // but in mobile device it works from the begining as its intrigrated when data loading
     // can't use on window.eventListner as the data might be still loading and with different king of data error becomes more complicated"
+    let heading = useRef(null)
+
     useEffect(() => {
         if (initialNews) {
             let q = [...initialNews]
+
+            // scrollin to top of the div when new news came
+            heading.current.scroll({
+                top:0,
+                behavior:"smooth"
+            })
+
             if (window.innerWidth < 701) {
                 setNews(q.slice(0, 10))
             } else {
@@ -61,7 +70,7 @@ function NewsSection() {
 
 
     return (
-        <main className={!lightTheme ? "darkTheme" : ""}>
+        <main ref={heading} className={!lightTheme ? "darkTheme" : ""}>
             <h2>{id}</h2>
             <p className='resultCounter'>results: {news ? news.length : 0}</p>
             <section className='cardsSection'>
