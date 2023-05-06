@@ -76,6 +76,10 @@ main.darkTheme .cards{
     background-color: rgb(88, 88, 168);
     color: black
 }
+.darkTheme .cards .readMore:hover{
+    background-color: rgb(88, 88, 168);
+    color: black
+}
 
 
 /* media query for cards section  */
@@ -83,6 +87,6 @@ main.darkTheme .cards{
 @media only screen and (max-width: 700px) {
     .cards{
         width: 80%;
-        height: 400px;
+        height: 400px; 
     }
 }
