@@ -10,6 +10,6 @@ This project is an one day practice project with react which helped me to rememb
 * jsx
 * html
 * css
-* RESRapi
+* RESTapi
 
 ### news api used: [inshorts-News-API](https://github.com/cyberboysumanjay/Inshorts-News-API)
