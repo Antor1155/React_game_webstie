@@ -15,16 +15,19 @@ function NewsSection() {
 
     
     function newsCollector(searchid) {
-        let url = `https://inshorts.deta.dev/news?category=${searchid ? searchid.toLowerCase() : "all" }`
+        // let url = `https://inshorts.deta.dev/news?category=${searchid ? searchid.toLowerCase() : "all" }`
+        let url = `https://saurav.tech/NewsAPI/top-headlines/category/${searchid ? searchid.toLowerCase() : "general"}/in.json`
+
        
         fetch(url)
             .then(response => response.json())
             .then(data => {
+                console.log(data)
                 if (data.status === "error") {
                     setServerError(true)
                 }
                 else {
-                    setInitialNews(data.data)
+                    setInitialNews(data.articles)
                     setServerError(false)
                 }
             })
