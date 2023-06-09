@@ -16,7 +16,10 @@ function NewsSection() {
     
     function newsCollector(searchid) {
         // let url = `https://inshorts.deta.dev/news?category=${searchid ? searchid.toLowerCase() : "all" }`
-        let url = `https://saurav.tech/NewsAPI/top-headlines/category/${searchid ? searchid.toLowerCase() : "general"}/in.json`
+        // let url = `https://saurav.tech/NewsAPI/top-headlines/category/${searchid ? searchid.toLowerCase() : "general"}/in.json`
+        // updating the api to gnews.io to fix broken search key 
+        let url = `https://gnews.io/api/v4/search?q=${searchid ? searchid : "general"}&apikey=ca77175b4b17f1086b2ef0e4ff449835`
+
 
        
         fetch(url)

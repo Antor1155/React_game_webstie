@@ -14,7 +14,7 @@ function App() {
     console.log("I appreciate your effort, Thank you..")
   },[])
 
-  let [lightTheme, setLightTheme] = useState(true)
+  let [lightTheme, setLightTheme] = useState(false)
 
   return (
     <ThemeContext.Provider value={{lightTheme, setLightTheme}}>
