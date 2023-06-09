@@ -15,20 +15,24 @@ function Head() {
     function handleChange(e) {
         setTopic(e.target.value)
     }
+    
     function handleSearch() {
         if (topic) {
             navigate(`/${topic}`)
             setTopic("")
         }
     }
+
     function handleTheme() {
         setLightTheme(!lightTheme)
     }
+
     function handleKeyPress(e){
         if(e.key === "Enter"){
             handleSearch()
         }
     }
+
     return (
         <header className={`headSection ${!lightTheme ? "darkTheme" : ""}` }>
             <div className='search'>
